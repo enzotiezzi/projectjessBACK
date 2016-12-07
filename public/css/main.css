@@ -1,0 +1,42 @@
+@font-face{
+    font-family: "Scriptina";
+    src: url('../assets/SCRIPTIN.ttf') format("truetype");
+}
+
+body{
+    background-color: #f6e3e3;
+    margin: 0px;
+}
+
+.social-media {
+    background-color: white;
+}
+
+.instagram-icon{
+    width: 29px;
+    height: 29px; 
+}
+
+.row{
+    margin: 0px;
+    padding: 5px;
+}
+
+.icon-item{
+    margin-right: 5px;
+}
+
+.title{
+    font-family: "Scriptina";
+    font-size: 30pt;
+    color: gray;
+    font-weight: bold;
+}
+
+.text-color-primary{
+    color: gray !important;
+}
+
+.nav-item-color{
+    color: #ed77bd;
+}
