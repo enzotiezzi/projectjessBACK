@@ -3,6 +3,7 @@ var express = require('express');
 var mongoose = require('mongoose');
 var body_parser = require('body-parser');
 var cookie_parser = require('cookie-parser');
+var path = require('path');
 var app = express();
 
 // load de configuracoes
@@ -20,7 +21,7 @@ var seed_atributos = require('./seeds/seedAtributos');
 app.use(body_parser.json());
 app.use(body_parser.urlencoded( {extended: false} ));
 app.use(cookie_parser());
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use('/node_modules', express.static(__dirname + '/node_modules/'));
 
 // usa rotas
