@@ -13,6 +13,7 @@ var db = require('./config/db');
 // load de rotas
 var home = require('./Controllers/home');
 var teste = require('./Controllers/teste');
+var resenha = require('./Controllers/resenha');
 
 // load de seeds
 var seed_atributos = require('./seeds/seedAtributos');
@@ -27,6 +28,7 @@ app.use('/node_modules', express.static(__dirname + '/node_modules/'));
 // usa rotas
 app.use('/', home);
 app.use('/teste', teste);
+app.use('/resenha', resenha);
 
 // usa configuracoes
 mongoose.connect(db.url);

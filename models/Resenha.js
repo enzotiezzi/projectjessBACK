@@ -9,6 +9,6 @@ var resenhaSchema = new Schema({
     paginas: Number
 });
 
-var Resenha = mongoose.model('Resenha', pessoaSchema);
+var Resenha = mongoose.model('Resenha', resenhaSchema);
 
 module.exports = Resenha;

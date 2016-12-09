@@ -1,9 +1,9 @@
 var express = require('express');
-var path = require('path');
+var views = require('../config/front');
 var router = express.Router();
 
 router.get('/', function (req, res) {
-	res.sendFile('index.html', { root: path.join(__dirname, '../public/views/') });
+	res.sendFile('index.html', { root: views.path });
 });
 
 module.exports = router;
