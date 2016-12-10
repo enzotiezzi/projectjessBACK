@@ -4,21 +4,17 @@ var fs = require('fs');
 var router = express.Router();
 var Resenha = require('../models/Resenha');
 
-router.get('/create/:code', function (req, res){
-    if (req.params.code)
-    {
-        if(req.params.code == 'jessT')
-        {
+router.get('/create/:code', function (req, res) {
+    if (req.params.code) {
+        if (req.params.code == 'jessT') {
             // TODO: RETORNAR HTML DE CRIAÇÃO DE RESENHA
-            res.send('Código correto');
+            res.sendfile('create.html', { root: views.path + "/resenha/" });
         }
-        else
-        {
+        else {
             res.send('Acesso negado');
         }
     }
-    else
-    {
+    else {
         res.send('Acesso negado');
     }
 });
