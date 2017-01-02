@@ -33,8 +33,8 @@ app.use(cors());
 // usa rotas
 app.use('/', home);
 app.use('/teste', teste);
-app.use('/resenha', resenha);
-app.use('/quiz', quizController);
+app.use('apis/resenha', resenha);
+app.use('apis/quiz', quizController);
 
 // usa configuracoes
 mongoose.connect(db.url);
