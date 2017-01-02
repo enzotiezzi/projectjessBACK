@@ -4,6 +4,7 @@ var mongoose = require('mongoose');
 var body_parser = require('body-parser');
 var cookie_parser = require('cookie-parser');
 var path = require('path');
+var cors = require('cors');
 var app = express();
 
 // load de configuracoes
@@ -14,6 +15,7 @@ var db = require('./config/db');
 var home = require('./Controllers/home');
 var teste = require('./Controllers/teste');
 var resenha = require('./Controllers/resenha');
+var quizController = require('./Controllers/quiz');
 
 // load de seeds
 var seed_atributos = require('./seeds/seedAtributos');
@@ -25,10 +27,14 @@ app.use(cookie_parser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/node_modules', express.static(__dirname + '/node_modules/'));
 
+// CORS
+app.use(cors());
+
 // usa rotas
 app.use('/', home);
 app.use('/teste', teste);
 app.use('/resenha', resenha);
+app.use('/quiz', quizController);
 
 // usa configuracoes
 mongoose.connect(db.url);

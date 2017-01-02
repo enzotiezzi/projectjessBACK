@@ -1,4 +1,4 @@
-var connection_string = '127.0.0.1:27017/buildbuilder';
+var connection_string = '127.0.0.1:27017/projectjess';
 
 if(process.env.OPENSHIFT_MONGODB_DB_PASSWORD){
   connection_string = process.env.OPENSHIFT_MONGODB_DB_USERNAME + ":" +

@@ -1,5 +1,5 @@
 {
-  "name": "build-builder-eso",
+  "name": "projectjess",
   "version": "1.0.0",
   "description": "",
   "keywords": [
@@ -25,6 +25,7 @@
   "dependencies": {
     "body-parser": "^1.15.2",
     "cookie-parser": "^1.4.3",
+    "cors": "^2.8.1",
     "express": "~4.13.4",
     "mongodb": "^1.4.4",
     "mongoose": "^4.5.3"
