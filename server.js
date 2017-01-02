@@ -24,14 +24,13 @@ var seed_atributos = require('./seeds/seedAtributos');
 app.use(body_parser.json());
 app.use(body_parser.urlencoded( {extended: false} ));
 app.use(cookie_parser());
-app.use(express.static(path.join(__dirname, '/public')));
+app.use("/", express.static(path.join(__dirname, '/public')));
 app.use('/node_modules', express.static(__dirname + '/node_modules/'));
 
 // CORS
 app.use(cors());
 
 // usa rotas
-app.use('/', home);
 app.use('/teste', teste);
 app.use('/apis/resenha', resenha);
 app.use('/apis/quiz', quizController);
