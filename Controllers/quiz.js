@@ -67,9 +67,11 @@ router.get('/quiz/:id', function(req, res){
     });
 });
 
-router.get('deleteAll', function(req, res){
+router.get('/deleteAll', function(req, res){
     Quiz.remove({}, function(){});
     ItemQuiz.remove({}, function(){});
+
+    res.send("deletou");
 });
 
 module.exports = router;
