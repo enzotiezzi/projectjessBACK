@@ -4,6 +4,7 @@ var router = express.Router();
 
 var Quiz = require('../models/Quiz');
 var ItemQuiz = require('../models/ItemQuiz');
+var RespostaQuiz = require('../models/RespostaQuiz');
 
 router.post('/criar', function (req, res) {
     var q = new Quiz({
@@ -52,7 +53,7 @@ router.get('/quiz/:id', function(req, res){
             res.json(error);
 
         var quizVM = {
-            idQuiz: id,
+            _id: id,
             itensQuiz: []
         };
 
@@ -67,11 +68,44 @@ router.get('/quiz/:id', function(req, res){
     });
 });
 
+router.post('/responder', function(req, res){
+    var respostas = req.body.respostas;
+
+    respostas.forEach(function(element) {
+        var r = new RespostaQuiz({
+            idQuiz: element.idQuiz,
+            idItemQuiz: element.idItemQuiz,
+            resposta: element.resposta,
+            identificacao: element.identificacao
+        });
+
+        r.save(function(error, lines){
+            if(error)
+                res.send(error);
+        });
+    }, this);
+
+    res.sendStatus(200);
+});
+
+router.get('/respostas', function(req, res){
+    RespostaQuiz.find(function(error, respostas){
+        if(error)
+            res.send(error);
+        
+        res.json(respostas);
+    });
+});
+
 router.get('/deleteAll', function(req, res){
     Quiz.remove({}, function(){});
     ItemQuiz.remove({}, function(){});
 
     res.send("deletou");
+});
+
+router.get('/deleteRespostas', function(req, res){
+    RespostaQuiz.remove({}, function(){});
 });
 
 module.exports = router;
