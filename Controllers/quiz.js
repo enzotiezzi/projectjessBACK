@@ -106,6 +106,8 @@ router.get('/deleteAll', function(req, res){
 
 router.get('/deleteRespostas', function(req, res){
     RespostaQuiz.remove({}, function(){});
+
+    res.send("deletou");
 });
 
 module.exports = router;
