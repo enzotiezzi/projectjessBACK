@@ -44,4 +44,27 @@ router.get('/listar', function(req, res){
     });
 });
 
+router.get('/quiz/:id', function(req, res){
+    var id = req.params.id;
+
+    Quiz.findById(id, function(error, quiz){
+        if(error)
+            res.json(error);
+
+        var quizVM = {
+            idQuiz: id,
+            itensQuiz: []
+        };
+
+        ItemQuiz.find({ idQuiz: id }, function(error, itens){
+            if(error)
+                res.json(error);
+
+            quizVM.itensQuiz = itens;
+
+            res.json(quizVM);    
+        });
+    });
+});
+
 module.exports = router;
