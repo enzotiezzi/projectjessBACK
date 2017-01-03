@@ -35,4 +35,13 @@ router.post('/criar', function (req, res) {
     res.sendStatus(200);
 });
 
+router.get('/listar', function(req, res){
+    Quiz.find(function(error, quizes){
+        if(error)
+            res.send(error);
+
+        res.json(quizes);
+    });
+});
+
 module.exports = router;
