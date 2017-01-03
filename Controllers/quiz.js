@@ -8,7 +8,7 @@ var ItemQuiz = require('../models/ItemQuiz');
 router.post('/criar', function (req, res) {
     var q = new Quiz({
         nomeQuiz: 'Quiz da Jess',
-        dataQuiz: Date.toString()
+        dataQuiz: Date.toString("dd/MM/yyyy HH:mm:ss")
     });
 
     q.save(function (error) {
@@ -65,6 +65,11 @@ router.get('/quiz/:id', function(req, res){
             res.json(quizVM);    
         });
     });
+});
+
+router.get('deleteAll', function(req, res){
+    Quiz.remove({}, function(){});
+    ItemQuiz.remove({}, function(){});
 });
 
 module.exports = router;
