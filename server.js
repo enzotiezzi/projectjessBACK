@@ -36,7 +36,7 @@ app.use('/apis/resenha', resenha);
 app.use('/apis/quiz', quizController);
 
 app.all("/*", function(req, res, next) {
-  res.render('index');
+  res.render(path.join(__dirname, '/public/index.html'));
 });
 
 // usa configuracoes
