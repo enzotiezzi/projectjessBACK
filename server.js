@@ -31,7 +31,7 @@ app.use(cors());
 
 // usa rotas
 app.use('/teste', teste);
-app.use('/apis/resenha', resenhaController);
+//app.use('/apis/resenha', resenhaController);
 app.use('/apis/quiz', quizController);
 
 app.get('/*', function(req, res) { 
