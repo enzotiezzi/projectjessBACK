@@ -1,5 +1,4 @@
 var express = require('express');
-
 var router = express.Router();
 var resenhaRepository = require('../repository/resenha-repository');
 
@@ -13,7 +12,7 @@ router.post('/criar', function(req, res){
     });
 });
 
-router.get('deletaTudo', function(req, res){
+router.get('/deletaTudo', function(req, res){
     resenhaRepository.deletarTudo(function(){
         res.send('deletou');
     });
