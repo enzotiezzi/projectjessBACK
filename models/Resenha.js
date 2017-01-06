@@ -6,7 +6,9 @@ var resenhaSchema = new Schema({
     conteudo: String,
     autor: String,
     editora: String,
-    paginas: Number
+    paginas: Number,
+    linkImagem: String,
+    nota: Number
 });
 
 var Resenha = mongoose.model('Resenha', resenhaSchema);

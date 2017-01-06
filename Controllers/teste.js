@@ -18,4 +18,8 @@ router.get('/', function (req, res) {
 	});
 });
 
+router.get('/teste', function(req, res){
+	res.send('de novo');
+});
+
 module.exports = router;
