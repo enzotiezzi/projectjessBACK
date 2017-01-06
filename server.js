@@ -13,7 +13,7 @@ var db = require('./config/db');
 
 // load de rotas
 var teste = require('./Controllers/teste');
-var resenhaController = require('./Controllers/resenha');
+//var resenhaController = require('./Controllers/resenha');
 var quizController = require('./Controllers/quiz');
 
 // load de seeds
@@ -23,7 +23,7 @@ var seed_atributos = require('./seeds/seedAtributos');
 app.use(body_parser.json());
 app.use(body_parser.urlencoded( {extended: false} ));
 app.use(cookie_parser());
-app.use("/", express.static(path.join(__dirname, '/public')));
+app.use(express.static(path.join(__dirname, '/public')));
 app.use('/node_modules', express.static(__dirname + '/node_modules/'));
 
 // CORS
