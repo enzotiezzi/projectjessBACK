@@ -34,9 +34,9 @@ app.use('/teste', teste);
 app.use('/apis/resenha', resenhaController);
 app.use('/apis/quiz', quizController);
 
-// app.get('/*', function(req, res) { 
-//   res.sendFile(__dirname + '/public/index.html');
-// });
+app.get('/*', function(req, res) { 
+  res.sendFile(__dirname + '/public/index.html');
+});
 
 // usa configuracoes
 mongoose.connect(db.url);
