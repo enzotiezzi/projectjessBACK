@@ -25,6 +25,6 @@ var resenhaRepository = {
             callback();
         });
     }
-};
+}
 
 module.exports = resenhaRepository;
