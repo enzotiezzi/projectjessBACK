@@ -1,4 +1,4 @@
-var Resenha = require(__dirname + '/../models/resenha');
+var Resenha = require(__dirname + '../models/resenha');
 
 var resenhaRepository = {
     // retorna true se cadastrou
