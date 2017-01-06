@@ -35,7 +35,7 @@ app.use('/apis/resenha', resenhaController);
 app.use('/apis/quiz', quizController);
 
 app.get('/*', function(req, res) { 
-  res.sendFile(__dirname + '/public/index.html')
+  res.sendFile(__dirname + '/public/index.html');
 });
 
 // usa configuracoes
