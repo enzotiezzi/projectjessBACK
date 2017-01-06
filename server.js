@@ -12,7 +12,6 @@ var url = require('./config/server');
 var db = require('./config/db');
 
 // load de rotas
-var home = require('./Controllers/home');
 var teste = require('./Controllers/teste');
 var resenhaController = require('./Controllers/resenha');
 var quizController = require('./Controllers/quiz');
