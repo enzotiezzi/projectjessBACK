@@ -49,4 +49,4 @@ seed_atributos();
 app.listen(url.port, url.ip, function(){
     console.log('Ouvindo em: %s porta %s', url.ip, url.port);
 });
-
+  

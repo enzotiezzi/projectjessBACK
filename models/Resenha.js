@@ -9,7 +9,7 @@ var resenhaSchema = new Schema({
     paginas: Number,
     linkImagem: String,
     nota: Number
-});
+}); 
 
 var Resenha = mongoose.model('Resenha', resenhaSchema);
 

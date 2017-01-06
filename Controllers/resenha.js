@@ -17,6 +17,6 @@ router.get('deletaTudo', function(req, res){
     resenhaRepository.deletarTudo(function(){
         res.send('deletou');
     });
-});
+});  
 
 module.exports = router;
