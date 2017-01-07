@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var resenhaRepository = require('../repositorio/resenha-repository');
+var resenhaRepository = require('../repository/resenha-repository');
 
 router.post('/criar', function (req, res) {
     console.log(req.body);
