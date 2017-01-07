@@ -24,6 +24,11 @@ var resenhaRepository = {
         Resenha.remove({}, function(){
             callback();
         });
+    },
+    listarResenhas: function(callback){
+        Resenha.find(function(error, resenhas){
+            callback(error, resenhas);
+        });
     }
 }
 
