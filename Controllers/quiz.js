@@ -2,9 +2,9 @@ var express = require('express');
 var views = require('../config/front');
 var router = express.Router();
 
-var Quiz = require('../models/Quiz');
-var ItemQuiz = require('../models/ItemQuiz');
-var RespostaQuiz = require('../models/RespostaQuiz');
+var Quiz = require('../models/quiz');
+var ItemQuiz = require('../models/item-quiz');
+var RespostaQuiz = require('../models/resposta-quiz');
 
 router.post('/criar', function (req, res) {
     var q = new Quiz({

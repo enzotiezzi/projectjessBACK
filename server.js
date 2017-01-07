@@ -12,12 +12,12 @@ var url = require('./config/server');
 var db = require('./config/db');
 
 // load de rotas
-var teste = require('./Controllers/teste');
-var resenhaController = require('./Controllers/resenha');
-var quizController = require('./Controllers/quiz');
+var teste = require('./controllers/teste');
+var resenhaController = require('./controllers/resenha');
+var quizController = require('./controllers/quiz');
 
 // load de seeds
-var seed_atributos = require('./seeds/seedAtributos');
+var seed_atributos = require('./seeds/seed-atributos');
 
 // usa configuracoes
 app.use(body_parser.json());

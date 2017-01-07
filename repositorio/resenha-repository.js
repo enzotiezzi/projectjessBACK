@@ -1,4 +1,4 @@
-var Resenha = require('../models/Resenha');
+var Resenha = require('../models/resenha');
 
 var resenhaRepository = {
     // retorna true se cadastrou
