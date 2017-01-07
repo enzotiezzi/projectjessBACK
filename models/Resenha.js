@@ -3,10 +3,10 @@ var Schema = mongoose.Schema;
 
 var resenhaSchema = new Schema({
 	titulo: String,
-    conteudo: String,
+    resenha: String,
     autor: String,
     editora: String,
-    paginas: Number,
+    quantidadePaginas: Number,
     linkImagem: String,
     nota: Number
 }); 

@@ -27,4 +27,13 @@ router.get('/listar', function (req, res) {
     });
 });
 
+router.get('/resenha/:id', function(req, res){
+    resenhaRepository.buscarResenha(req.params.id, function(error, resenha){
+        if(error)
+            res.send(error);
+
+        res.json(resenha);
+    });
+});
+
 module.exports = router;

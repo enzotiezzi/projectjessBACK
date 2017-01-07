@@ -5,10 +5,10 @@ var resenhaRepository = {
     criarResenha: function(resenha, callback){
         var r = new Resenha({
             titulo: resenha.titulo,
-            conteudo: resenha.resenha,
+            resenha: resenha.resenha,
             autor: resenha.autor,
             editora: resenha.editora,
-            paginas: resenha.quantidadePaginas,
+            quantidadePaginas: resenha.quantidadePaginas,
             linkImagem: resenha.linkImagem,
             nota: resenha.nota
         });
@@ -28,6 +28,11 @@ var resenhaRepository = {
     listarResenhas: function(callback){
         Resenha.find(function(error, resenhas){
             callback(error, resenhas);
+        });
+    },
+    buscarResenha: function(idResenha, callback){
+        Resenha.findOne({ _id: idResenha }, function(error, resenha){
+            callback(error, resenha);
         });
     }
 }
