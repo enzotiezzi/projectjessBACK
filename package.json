@@ -6,7 +6,8 @@
     "OpenShift",
     "Node.js",
     "application",
-    "openshift"
+    "openshift",
+    "angular2"
   ],
   "author": {
     "name": "Enzo",
