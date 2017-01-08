@@ -101,7 +101,7 @@ router.get('/respostas', function (req, res) {
 
 router.get('/respostas/:id', function (req, res) {
     var id = decodeURIComponent(req.params.id);
-    
+
     while(id.indexOf('@-') != -1)
         id = id.replace('@-', '/');
 
