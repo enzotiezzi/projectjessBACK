@@ -100,7 +100,7 @@ router.get('/respostas', function (req, res) {
 });
 
 router.get('/respostas/:id', function (req, res) {
-    var id = req.params.id;
+    var id = decodeURI(req.params.id);
 
     RespostaQuiz.find({ identificacao: id })
         .populate('idItemQuiz', 'pergunta')
