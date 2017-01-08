@@ -2,8 +2,8 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var respostaSchema = new Schema({
-    idQuiz: Schema.Types.ObjectId,
-    idItemQuiz: Schema.Types.ObjectId,
+    idQuiz: { type: Schema.Types.ObjectId, ref: 'Quiz' },
+    idItemQuiz: { type: Schema.Types.ObjectId, ref: 'ItemQuiz' },
     resposta: String,
     identificacao: String
 });
